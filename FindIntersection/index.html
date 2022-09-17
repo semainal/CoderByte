@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        function FindIntersection(strArr){
+
+            let firstString = strArr[0];
+            let secondString = strArr[1];
+          
+            let firstElementArray = []
+            let secondElementArray = []
+          
+            firstString.split(',').map((oneNumber) => {
+              firstElementArray.push(Number(oneNumber))
+            })
+          
+            secondString.split(',').map((oneNumber) => {
+              secondElementArray.push(Number(oneNumber))
+            })
+          
+          let myAnswer = (secondElementArray.filter(e => firstElementArray.includes(e))).toString()
+          
+            if(!myAnswer){
+              return false
+            } else  {
+              return myAnswer; 
+            }
+          }
+             
+          // keep this function call here 
+          console.log(FindIntersection(readline()));
+    </script>
+</body>
+</html>
