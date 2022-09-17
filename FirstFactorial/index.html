@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+
+        function FirstFactorial(num) { 
+
+            let i = [];
+          
+            if(num ==0 || num == 1) 
+              return 1;
+            if(i[num] > 0)
+              return i[num];
+            return i[num] = FirstFactorial(num -1) *num; 
+            
+          
+          }
+             
+          // keep this function call here 
+          console.log(FirstFactorial(readline()));
+    </script>
+</body>
+</html>

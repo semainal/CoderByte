@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <!-- Have the function LongestWord(sen) take the sen parameter being passed 
+    and return the longest word in the string. If there are two or more words that are the same length, 
+    return the first word from the string with that length. Ignore punctuation and assume sen will not be empty. 
+    Words may also contain numbers, for example "Hello world123 567" -->
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function LongestWord(sen) { 
+            var arr = sen.replace(/[^a-zA-Z ]/g,"").split(" ");
+  
+            arr.sort(function(a,b) { return b.length - a.length } );
+            return arr.shift();
+        
+            
+            }
+
+            // code goes here  
+    
+          
+
+          // keep this function call here 
+          console.log(LongestWord(readline()));
+    </script>
+</body>
+</html>
