@@ -1,0 +1,62 @@
+<!-- Codeland Username Validation
+Have the function CodelandUsernameValidation(str) take the str parameter being passed and determine if the string is a valid username according to the following rules:
+
+1. The username is between 4 and 25 characters.
+2. It must start with a letter.
+3. It can only contain letters, numbers, and the underscore character.
+4. It cannot end with an underscore character.
+
+If the username is valid then your program should return the string true, otherwise return the string false. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        function CodelandUsernameValidation(str) { 
+
+           let s = str.split("");
+           let letters = "abcdefghijklmnopqrstuvwxyz";
+           let allowed = "abcdefghijklmnopqrstuvwxyz0123456789_";
+           let len = s.length;
+
+           if(len <4 || len >25) {
+            return false;
+        }
+
+            if(!letters.includes(s[0].toLowerCase())) {
+                return false;
+            }
+
+            for (let i=0; i<len; i++) {
+                if(!allowed.includes(s[i].toLowerCase())) {
+                    return false;
+                }
+            }
+
+            if (s[len-1] === "_") {
+                return false
+            }
+            // code goes here  
+            return true; 
+          
+          }
+             
+          // keep this function call here 
+          console.log(CodelandUsernameValidation("_sema"));
+
+
+
+    </script>
+</body>
+</html>
